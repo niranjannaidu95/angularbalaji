@@ -21,12 +21,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import { OverlayComponent } from './overlay/overlay.component';
-import { ApplyLoanComponent } from './loan/apply-loan/apply-loan.component';
-import { ProcessLoanComponent } from './loan/process-loan/process-loan.component';
-import { LoanRepaymentComponent } from './loan/loan-repayment/loan-repayment.component';
-import { CarInsuranceComponent } from './insurance/car-insurance/car-insurance.component';
-import { ClaimInsuranceComponent } from './insurance/claim-insurance/claim-insurance.component';
-import { InsuranceComponent } from './insurance/insurance/insurance.component';
+import { LoanModule } from './loan/loan.module';
+import { InsuranceModule } from './insurance/insurance.module';
+
 
 
 @NgModule({
@@ -39,14 +36,6 @@ import { InsuranceComponent } from './insurance/insurance/insurance.component';
     ReactiveformbuilderComponent,
     LeftnavComponent,
     OverlayComponent,
-    ApplyLoanComponent,
-    ProcessLoanComponent,
-    LoanRepaymentComponent,
-    CarInsuranceComponent,
-    ClaimInsuranceComponent,
-    InsuranceComponent,
-    
-
     
 
   ],
@@ -62,7 +51,9 @@ import { InsuranceComponent } from './insurance/insurance/insurance.component';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    LoanModule,
+    InsuranceModule,
 
   ],
   providers: [],

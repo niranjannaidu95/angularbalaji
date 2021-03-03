@@ -11,7 +11,7 @@ export class AppComponent implements OnInit,OnChanges,DoCheck {
  
   title = 'angularproject';
   nira: string;
-
+  value:string="i am from parent"
 
 constructor(public sampleService:SampleService){
 
@@ -34,7 +34,11 @@ btn(){
   const  incementedValue=this.sampleService.increment;
     this.sampleService.sampleNumber += this.sampleService.sampleAdder (4,5)+incementedValue;
 }
-
+outputDisplay;
+receiveData($event){
+  this.outputDisplay = $event;
+console.log($event);
+}
 
 
 

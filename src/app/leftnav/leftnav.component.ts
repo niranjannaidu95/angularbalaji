@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { SampleService } from 'src/shared/services/sample.service';
 import { routes } from '../app-routing.module';
 
@@ -10,12 +10,19 @@ import { routes } from '../app-routing.module';
 })
 export class LeftnavComponent  {
 
+  @Input() value:string;
+  @Output() outputValue=new EventEmitter<string>();
+
+
   routes = routes;
   constructor(public sampleService:SampleService){
 
   }
   ngOnInit():void{
     console.log(this.sampleService.sampleNumber)
+  }
+  sendValue(){
+    this.outputValue.emit('value emitted from child')
   }
 
 }

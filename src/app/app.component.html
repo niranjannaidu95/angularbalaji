@@ -8,10 +8,10 @@
 <app-signin></app-signin> -->
 
 <!-- <router-outlet></router-outlet> -->
+{{outputDisplay}}
+<app-leftnav [value]='value' (outputValue)="receiveData($event)" ></app-leftnav>
 
-<app-leftnav></app-leftnav>
-
-<h1>{{nira}}</h1>
+<!-- <h1>{{nira}}</h1>
 <span>{{sampleService.sampleNumber}}</span>
 <input type="text">
-<button type="submit" (click)="btn()"> submit </button>
+<button type="submit" (click)="btn()"> submit </button> -->

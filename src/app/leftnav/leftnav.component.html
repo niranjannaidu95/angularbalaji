@@ -6,7 +6,12 @@
            [routerLink]="route.path" 
            (click)="sidenav.toggle()"> {{route.path}}</a>
       </mat-nav-list>
+
 <h1>{{sampleService.sampleNumber}}</h1>
+
+<h2>{{value}}</h2>
+<button (click)="sendValue()" >send value</button>
+
 
     </mat-sidenav>
     <mat-sidenav-content>
