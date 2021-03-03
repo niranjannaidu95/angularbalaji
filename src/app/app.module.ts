@@ -15,6 +15,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
 import { ReactiveformbuilderComponent } from './reactiveformbuilder/reactiveformbuilder.component';
+import { LeftnavComponent } from './leftnav/leftnav.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import { OverlayComponent } from './overlay/overlay.component';
+import { ApplyLoanComponent } from './loan/apply-loan/apply-loan.component';
+import { ProcessLoanComponent } from './loan/process-loan/process-loan.component';
+import { LoanRepaymentComponent } from './loan/loan-repayment/loan-repayment.component';
+import { CarInsuranceComponent } from './insurance/car-insurance/car-insurance.component';
+import { ClaimInsuranceComponent } from './insurance/claim-insurance/claim-insurance.component';
+import { InsuranceComponent } from './insurance/insurance/insurance.component';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +37,16 @@ import { ReactiveformbuilderComponent } from './reactiveformbuilder/reactiveform
     AutocompleteComponent,
     ReactiveformsComponent,
     ReactiveformbuilderComponent,
+    LeftnavComponent,
+    OverlayComponent,
+    ApplyLoanComponent,
+    ProcessLoanComponent,
+    LoanRepaymentComponent,
+    CarInsuranceComponent,
+    ClaimInsuranceComponent,
+    InsuranceComponent,
+    
+
     
 
   ],
@@ -35,8 +58,11 @@ import { ReactiveformbuilderComponent } from './reactiveformbuilder/reactiveform
     ReactiveFormsModule,
     MatAutocompleteModule,
     MatFormFieldModule ,
-    MatInputModule
-
+    MatInputModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatIconModule
 
   ],
   providers: [],
