@@ -12,9 +12,10 @@ export class LeftnavComponent  {
 
   @Input() value:string;
   @Output() outputValue=new EventEmitter<string>();
-
-
+ 
   routes = routes;
+  viewChildResult:string="dummy value";
+
   constructor(public sampleService:SampleService){
 
   }

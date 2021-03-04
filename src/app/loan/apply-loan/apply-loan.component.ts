@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from 'src/app/http.service';
 
 @Component({
   selector: 'app-apply-loan',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApplyLoanComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpService:HttpService) { }
 
   ngOnInit(): void {
+    this.httpService.getYahoo().subscribe();
   }
 
 }
