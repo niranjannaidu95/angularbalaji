@@ -23,6 +23,11 @@ import {MatIconModule} from '@angular/material/icon';
 import { OverlayComponent } from './overlay/overlay.component';
 import { LoanModule } from './loan/loan.module';
 import { InsuranceModule } from './insurance/insurance.module';
+import { FirstLetterPipe } from 'src/shared/pipes/first-letter.pipe';
+import { HightlightDirective } from 'src/shared/directives/hightlight.directive';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HeaderInterceptor } from 'src/shared/interceptors/header.interceptor';
+
 
 
 
@@ -36,6 +41,8 @@ import { InsuranceModule } from './insurance/insurance.module';
     ReactiveformbuilderComponent,
     LeftnavComponent,
     OverlayComponent,
+    FirstLetterPipe,
+    HightlightDirective
     
 
   ],
@@ -56,7 +63,9 @@ import { InsuranceModule } from './insurance/insurance.module';
     InsuranceModule,
 
   ],
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS, useClass:HeaderInterceptor,multi:trud
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
