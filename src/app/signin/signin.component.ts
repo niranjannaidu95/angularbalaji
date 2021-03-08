@@ -45,6 +45,7 @@ export class SigninComponent implements OnInit {
           value + 'software developer'
         ))
       // .subscribe();
+  
 
       this.readSample4 = this.sampleService.sampleObservable$
       .pipe(
@@ -53,6 +54,20 @@ export class SigninComponent implements OnInit {
         ))
         // .subscribe();
 
-  }
+  
+// this.sampleService.setSubject('niranjan');
+  this.sampleService.sampleSubject$.pipe(
+tap((value) =>console.log('subject'+value))
+  ).subscribe();
 
+  this.sampleService.setBehSubject(10);
+  this.sampleService.getBehSubject().subscribe(x => console.log('behValue'+x.toString()))
+
+  this.sampleService.setBehSubject(10);
+  this.sampleService.getBehSubject().subscribe(x => console.log('behValue'+x.toString()))
+  
+  this.sampleService.setBehSubject(10);
+  this.sampleService.getBehSubject().subscribe(x => console.log('behValue'+x.toString()))
+
+}
 }

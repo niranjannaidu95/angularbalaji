@@ -7,7 +7,8 @@ import { ProcessLoanComponent } from './process-loan/process-loan.component';
 
 
 export const routes: Routes = [
-    { path: '', component: ApplyLoanComponent },
+    { path: '', component: ApplyLoanComponent},
+    // canActivate: [CanActivateApplyLoanGuard] },
     { path: 'loan-repayment', component: LoanRepaymentComponent },
     { path: 'process-loan', component: ProcessLoanComponent },
 
