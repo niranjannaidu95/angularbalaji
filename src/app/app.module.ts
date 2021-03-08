@@ -64,7 +64,7 @@ import { HeaderInterceptor } from 'src/shared/interceptors/header.interceptor';
 
   ],
   providers: [{
-    provide:HTTP_INTERCEPTORS, useClass:HeaderInterceptor,multi:trud
+    provide:HTTP_INTERCEPTORS, useClass:HeaderInterceptor,multi:true
   }],
   bootstrap: [AppComponent]
 })
